@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		039221AE6BAB4F7E31EC512C /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4C739FECB454A961B9A8DA /* ShareViewController.swift */; };
 		0D67CDB002903F09A16DFFD6 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = EF304E0D3CE9DC4B4CE241BE /* main.mm */; };
 		24014A8E052B35EC0ED572DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C7CF871DDF684F8C603D172 /* Assets.xcassets */; };
 		3283CE83BC96FFB03676A4B0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB6A85C8821DE56BD27EAA4 /* Security.framework */; };
@@ -19,12 +20,42 @@
 		9783A97A24A7B930571F97E1 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC64787CBD755611E6F5C7FB /* MetalKit.framework */; };
 		A6BFAA8BB09723A766717B70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFD050AE26A131B477A4EFE /* UIKit.framework */; };
 		A7300AB33C3C0F7A22C5951D /* assets in Resources */ = {isa = PBXBuildFile; fileRef = ABC8047FC9243B46A32176B9 /* assets */; };
+		C4FE4BB6FD264C7466CBA4FC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B4EF3500A2D19264F929A8 /* MainInterface.storyboard */; };
+		D2266B8F5F7395F4582A835B /* tauri2-test_iOS_shareExt.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EC278D5EC9B448087ABAC123 /* tauri2-test_iOS_shareExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E043AEE4BFBDB63044A49E8D /* libtauri2_test_lib.a in Resources */ = {isa = PBXBuildFile; fileRef = 093DA7B8E0779D1CE77EEA61 /* libtauri2_test_lib.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A2F6259DC6A4179C3D087FF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 018A30D414FD4847AAA03E2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79FFE85D7AD37182BB2967FB;
+			remoteInfo = "tauri2-test_iOS_shareExt";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9E6F39219BE30C8D0FACC58B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D2266B8F5F7395F4582A835B /* tauri2-test_iOS_shareExt.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		093DA7B8E0779D1CE77EEA61 /* libtauri2_test_lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtauri2_test_lib.a; sourceTree = "<group>"; };
+		19417E6416DDF6647A44EC03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1AB6A85C8821DE56BD27EAA4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2EB98CB132A7D03FC811F31A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		32742910DC851F31486DBE8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		49A25178BC19B2C3D19294DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		5D2807514F35FEAD5B87F196 /* bindings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bindings.h; sourceTree = "<group>"; };
 		7795B5C6C0F3CC4D39F8D4E9 /* tauri2-test_iOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "tauri2-test_iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		869795CDC7B425F5F3F4A19F /* libtauri2_test_lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtauri2_test_lib.a; sourceTree = "<group>"; };
@@ -37,6 +68,8 @@
 		BDDB07734CAAAB39C20C6A11 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE3FD31ED72E9844D0CCC650 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CEB3F690B07F45B8A975AEC1 /* tauri2-test_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "tauri2-test_iOS.entitlements"; sourceTree = "<group>"; };
+		DD4C739FECB454A961B9A8DA /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		EC278D5EC9B448087ABAC123 /* tauri2-test_iOS_shareExt.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = "tauri2-test_iOS_shareExt.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF304E0D3CE9DC4B4CE241BE /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		FC64787CBD755611E6F5C7FB /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		FF53C932AE53FD99F8C7F002 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
@@ -64,6 +97,7 @@
 		18899BBFE2C2B0128CC21316 /* Externals */ = {
 			isa = PBXGroup;
 			children = (
+				738C98E30C6218332976D782 /* arm64-sim */,
 			);
 			path = Externals;
 			sourceTree = "<group>";
@@ -71,6 +105,7 @@
 		1C649632D597991E6CEB378C /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				EC278D5EC9B448087ABAC123 /* tauri2-test_iOS_shareExt.appex */,
 				7795B5C6C0F3CC4D39F8D4E9 /* tauri2-test_iOS.app */,
 			);
 			name = Products;
@@ -110,6 +145,14 @@
 			path = "tauri2-test";
 			sourceTree = "<group>";
 		};
+		738C98E30C6218332976D782 /* arm64-sim */ = {
+			isa = PBXGroup;
+			children = (
+				8EB206245629D0F57165CFA3 /* debug */,
+			);
+			path = "arm64-sim";
+			sourceTree = "<group>";
+		};
 		743011434331E9B3216C68D0 = {
 			isa = PBXGroup;
 			children = (
@@ -120,9 +163,28 @@
 				DFFF0730556DB48CECD4407B /* Sources */,
 				2B0D3D1546FD83A2829A1F0A /* src */,
 				990C53D3CC50DEB3C95D0939 /* tauri2-test_iOS */,
+				801C63A21FE682C8856F2145 /* tauri2-test_iOS_shareExt */,
 				24A49FB38F691809B91580FE /* Frameworks */,
 				1C649632D597991E6CEB378C /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		801C63A21FE682C8856F2145 /* tauri2-test_iOS_shareExt */ = {
+			isa = PBXGroup;
+			children = (
+				19417E6416DDF6647A44EC03 /* Info.plist */,
+				E8B4EF3500A2D19264F929A8 /* MainInterface.storyboard */,
+				DD4C739FECB454A961B9A8DA /* ShareViewController.swift */,
+			);
+			path = "tauri2-test_iOS_shareExt";
+			sourceTree = "<group>";
+		};
+		8EB206245629D0F57165CFA3 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				093DA7B8E0779D1CE77EEA61 /* libtauri2_test_lib.a */,
+			);
+			path = debug;
 			sourceTree = "<group>";
 		};
 		990C53D3CC50DEB3C95D0939 /* tauri2-test_iOS */ = {
@@ -150,6 +212,20 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		"TEMP_26F7365A-0EF0-4BCA-A8E4-8A6D130A056B" /* arm64 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = arm64;
+			sourceTree = "<group>";
+		};
+		"TEMP_CA1005B6-0A10-4332-A409-16874D5D972E" /* x86_64 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = x86_64;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -161,15 +237,33 @@
 				825E8AA3957B70DF1C3212A9 /* Sources */,
 				09BA1176A65B630B3D38E2BE /* Resources */,
 				2F38E84EF55883F07F8C08B4 /* Frameworks */,
+				9E6F39219BE30C8D0FACC58B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				11CA74DCC1F957CF7E6EB7C1 /* PBXTargetDependency */,
 			);
 			name = "tauri2-test_iOS";
 			productName = "tauri2-test_iOS";
 			productReference = 7795B5C6C0F3CC4D39F8D4E9 /* tauri2-test_iOS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		79FFE85D7AD37182BB2967FB /* tauri2-test_iOS_shareExt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 777AEE8A0C93756A21897750 /* Build configuration list for PBXNativeTarget "tauri2-test_iOS_shareExt" */;
+			buildPhases = (
+				3186818AC25ACCB5DA0D8FE9 /* Sources */,
+				6C9FCFF53D22A5A4C29CB5B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tauri2-test_iOS_shareExt";
+			productName = "tauri2-test_iOS_shareExt";
+			productReference = EC278D5EC9B448087ABAC123 /* tauri2-test_iOS_shareExt.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -195,6 +289,7 @@
 			projectRoot = "";
 			targets = (
 				06A3B9BF58A100A176CE73F8 /* tauri2-test_iOS */,
+				79FFE85D7AD37182BB2967FB /* tauri2-test_iOS_shareExt */,
 			);
 		};
 /* End PBXProject section */
@@ -207,6 +302,15 @@
 				24014A8E052B35EC0ED572DB /* Assets.xcassets in Resources */,
 				844E6DE1DC479BA6BD68B2BF /* LaunchScreen.storyboard in Resources */,
 				A7300AB33C3C0F7A22C5951D /* assets in Resources */,
+				E043AEE4BFBDB63044A49E8D /* libtauri2_test_lib.a in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C9FCFF53D22A5A4C29CB5B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4FE4BB6FD264C7466CBA4FC /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +342,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3186818AC25ACCB5DA0D8FE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				039221AE6BAB4F7E31EC512C /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		825E8AA3957B70DF1C3212A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,6 +359,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11CA74DCC1F957CF7E6EB7C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79FFE85D7AD37182BB2967FB /* tauri2-test_iOS_shareExt */;
+			targetProxy = A2F6259DC6A4179C3D087FF6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E8B4EF3500A2D19264F929A8 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49A25178BC19B2C3D19294DA /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3BA97D9054500E71F351F1F5 /* debug */ = {
@@ -346,6 +477,32 @@
 			};
 			name = debug;
 		};
+		3EA58042EAF0F21DD457F386 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					"arm64-sim",
+				);
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "arm64-sim x86_64";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 x86_64";
+				INFOPLIST_FILE = "tauri2-test_iOS_shareExt/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=arm64-sim]" = "$(inherited) $(PROJECT_DIR)/Externals/arm64-sim/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				"LIBRARY_SEARCH_PATHS[arch=arm64]" = "$(inherited) $(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				"LIBRARY_SEARCH_PATHS[arch=x86_64]" = "$(inherited) $(PROJECT_DIR)/Externals/x86_64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tauri.dev.tauri2-test-iOS-shareExt";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64  arm64-sim";
+			};
+			name = release;
+		};
 		72D573A03298A28FD30E4DFD /* release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -402,6 +559,32 @@
 			};
 			name = release;
 		};
+		872EC643C9CE72CD3001D416 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					arm64,
+					"arm64-sim",
+				);
+				ENABLE_BITCODE = NO;
+				"EXCLUDED_ARCHS[sdk=iphoneos*]" = "arm64-sim x86_64";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 x86_64";
+				INFOPLIST_FILE = "tauri2-test_iOS_shareExt/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=arm64-sim]" = "$(inherited) $(PROJECT_DIR)/Externals/arm64-sim/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				"LIBRARY_SEARCH_PATHS[arch=arm64]" = "$(inherited) $(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				"LIBRARY_SEARCH_PATHS[arch=x86_64]" = "$(inherited) $(PROJECT_DIR)/Externals/x86_64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tauri.dev.tauri2-test-iOS-shareExt";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64  arm64-sim";
+			};
+			name = debug;
+		};
 		E5A37C95EDE3C6FCBC68FB51 /* release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -444,6 +627,15 @@
 			buildConfigurations = (
 				3BA97D9054500E71F351F1F5 /* debug */,
 				72D573A03298A28FD30E4DFD /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		777AEE8A0C93756A21897750 /* Build configuration list for PBXNativeTarget "tauri2-test_iOS_shareExt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				872EC643C9CE72CD3001D416 /* debug */,
+				3EA58042EAF0F21DD457F386 /* release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = debug;

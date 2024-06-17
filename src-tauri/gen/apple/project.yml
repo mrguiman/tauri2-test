@@ -81,6 +81,7 @@ targets:
       - sdk: Security.framework
       - sdk: UIKit.framework
       - sdk: WebKit.framework
+      - target: tauri2-test_iOS_shareExt
     preBuildScripts:
       - script: cargo tauri ios xcode-script -v --platform ${PLATFORM_DISPLAY_NAME:?} --sdk-root ${SDKROOT:?} --framework-search-paths "${FRAMEWORK_SEARCH_PATHS:?}" --header-search-paths "${HEADER_SEARCH_PATHS:?}" --gcc-preprocessor-definitions "${GCC_PREPROCESSOR_DEFINITIONS:-}" --configuration ${CONFIGURATION:?} ${FORCE_COLOR} ${ARCHS:?}
         name: Build Rust Code
@@ -89,3 +90,26 @@ targets:
           - $(SRCROOT)/Externals/x86_64/${CONFIGURATION}/libtauri2_test_lib.a
           - $(SRCROOT)/Externals/arm64/${CONFIGURATION}/libtauri2_test_lib.a
           - $(SRCROOT)/Externals/arm64-sim/${CONFIGURATION}/libtauri2_test_lib.a
+  tauri2-test_iOS_shareExt:
+    platform: iOS
+    type: app-extension
+    sources:
+      - tauri2-test_iOS_shareExt
+    info:
+      path: tauri2-test_iOS_shareExt/Info.plist
+      properties:
+        NSExtension:
+          NSExtensionPointIdentifier: "com.apple.share-services"
+          NSExtensionMainStoryboard: "MainInterface"
+          NSExtensionAttributes:
+            NSExtensionActivationRule: "TRUEPREDICATE"
+    settings:
+      base:
+        ENABLE_BITCODE: false
+        ARCHS: [arm64, arm64-sim]
+        VALID_ARCHS: arm64  arm64-sim
+        LIBRARY_SEARCH_PATHS[arch=x86_64]: $(inherited) $(PROJECT_DIR)/Externals/x86_64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)
+        LIBRARY_SEARCH_PATHS[arch=arm64]: $(inherited) $(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)
+        LIBRARY_SEARCH_PATHS[arch=arm64-sim]: $(inherited) $(PROJECT_DIR)/Externals/arm64-sim/$(CONFIGURATION) $(SDKROOT)/usr/lib/swift $(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME) $(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)
+        EXCLUDED_ARCHS[sdk=iphonesimulator*]: arm64 x86_64
+        EXCLUDED_ARCHS[sdk=iphoneos*]: arm64-sim x86_64
