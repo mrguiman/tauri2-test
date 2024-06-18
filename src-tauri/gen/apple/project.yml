@@ -107,7 +107,6 @@ targets:
         CFBundleDisplayName: $(PRODUCT_NAME)
     settings:
       base:
-        ENABLE_BITCODE: false
         PRODUCT_NAME: tauri2-test-sharerext
         PRODUCT_BUNDLE_IDENTIFIER: com.tauritestitest.dev.shareext
       groups: [app]
