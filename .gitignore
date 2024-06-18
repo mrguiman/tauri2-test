@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+src-tauri/gen
+!src-tauri/gen/apple/tauri2-test_iOS_shareExt
+!src-tauri/gen/apple/project.yml
