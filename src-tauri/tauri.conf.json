@@ -1,7 +1,7 @@
 {
   "productName": "tauri2-test",
   "version": "0.0.0",
-  "identifier": "com.tauri.dev",
+  "identifier": "com.tauritestitest.dev",
   "build": {
     "beforeDevCommand": "npm run dev",
     "devUrl": "http://localhost:1420",
