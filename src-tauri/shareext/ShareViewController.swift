@@ -2,6 +2,7 @@
 //  ShareViewController.swift
 //  shareext
 //
+//  Created by GMan on 22/07/2024.
 //
 
 import UIKit
